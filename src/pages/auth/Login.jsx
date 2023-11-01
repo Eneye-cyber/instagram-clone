@@ -4,7 +4,7 @@ function Login() {
 
   return (
     <section className="w-full flex justify-center gap-7 items-center mt-8"> 
-      <div className="bg-[url('/img/home-phones-2x.png')] bg-[length:468.32px_634.15px] bg-[-42px_0] self-center h-[589px] min-w-[380.32px]">
+      <div className="hidden lg:block bg-[url('/img/home-phones-2x.png')] bg-[length:468.32px_634.15px] bg-[-42px_0] self-center h-[589px] min-w-[380.32px]">
       </div>
       <div className="max-w-[358px] w-full flex flex-col">
         <div className="form border w-full border-neutral-200 flex flex-col">
