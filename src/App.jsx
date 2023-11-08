@@ -1,17 +1,13 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import Login from './pages/auth/Login'
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import './App.css'
+import { routes } from "./services/router/Index";
+
+const router = createBrowserRouter(routes)
 
 function App() {
 
   return (
-    <>
-      <div>
-        <Login />
-      </div>
-    </>
+      <RouterProvider router={router} />
   )
 }
 
