@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom'
+import { useLocation, NavLink } from 'react-router-dom'
 import { lazy, Suspense } from 'react';
 
 const LoginForm = lazy(() => import('../../components/auth/LoginForm'));
@@ -22,7 +22,7 @@ function Login() {
         </div>
 
         <div className="form border w-full border-neutral-200 flex flex-col py-5 my-2 text-center">
-          <h5 className="text-sm font-medium">Don&apos;t have an account? <a href="#" className="text-[#0095f6]">Sign up</a></h5>
+          <h5 className="text-sm font-medium">Don&apos;t have an account? <NavLink to="/accounts/emailsignup" className="text-[#0095f6]">Sign up</NavLink></h5>
         </div>
 
         <div className="w-full hidden sm:block text-center mt-2">

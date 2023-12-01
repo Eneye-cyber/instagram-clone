@@ -13,6 +13,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --nav-narrow-width: 72px;
+  --nav-medium-width: 244px;
+  --nav-wide-width: 335px;
+
+  --ig-separator: 219, 219, 219
 }
 
 

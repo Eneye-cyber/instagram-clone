@@ -1,8 +1,7 @@
 import Login from "../../pages/auth/Login";
-import ResetPassword from "../../pages/accounts/ResetPassword";
 import Accounts from "../../pages/accounts/Base";
 import Error from "../../pages/error/Error";
-
+import Home from "../../pages/index/Home"
 export const routes = [
     {
       path: "/",
@@ -19,7 +18,12 @@ export const routes = [
       errorElement: <Error />
     },
     {
+      path: '/home',
+      element: <Home />
+    },
+    {
       path: "/accounts", // not necessary in child routes
+      // lazy: () => import('../../pages/accounts/Base'), //code-splitting
       element: <Accounts />,
       children: [
         {
@@ -36,7 +40,7 @@ export const routes = [
         },
         {
           path: "/accounts/password/reset",
-          element: <ResetPassword />,
+          lazy: () => import('../../pages/accounts/ResetPassword'), //code-splitting
         },
       ],
     },

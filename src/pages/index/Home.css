@@ -1,0 +1,4 @@
+aside.sideNav{
+  width: var(--nav-medium-width);
+  border-right: 1px solid rgb(var(--ig-separator));
+}

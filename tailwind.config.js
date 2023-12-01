@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary-gray': '#737373'
+        'primary-gray': '#737373',
+        'ig-hover-overlay': 'rgba(0, 0, 0, .05)'
       }
     },
   },

@@ -3,7 +3,7 @@ import { useState } from "react"
 import { NavLink } from "react-router-dom";
 import Header from "../../components/Header"
 
-function ResetPassword() {
+function Component() {
   const [username, setUsername] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
   const [loading, setLoading] = useState(false)
@@ -69,4 +69,4 @@ function ResetPassword() {
   )
 }
 
-export default ResetPassword
+export { Component }
