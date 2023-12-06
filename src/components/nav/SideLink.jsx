@@ -1,9 +1,9 @@
 
 function SideLink({ icon, text }) {
   return (
-    <div style={{margin: '2px 0'}} className='p-3 flex items-center gap-3 rounded-lg'>
+    <div style={{margin: '4px 0'}} className='p-3 flex items-center gap-3 rounded-lg cursor-pointer hover:bg-ig-hover-overlay'>
       {icon && <img src={icon} alt={text ?? 'icon'} width={22} height={22} />}
-      <p className=' text-base font-medium'>{text ?? 'NavLink'}</p>
+      <p className=' sm:hidden lg:inline text-base font-medium'>{text ?? 'NavLink'}</p>
     </div>
   )
 }

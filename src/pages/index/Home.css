@@ -1,4 +1,7 @@
 aside.sideNav{
-  width: var(--nav-medium-width);
+  /* width: var(--nav-medium-width); */
   border-right: 1px solid rgb(var(--ig-separator));
+}
+.body {
+  width: calc(100% - var(--nav-medium-width));
 }
