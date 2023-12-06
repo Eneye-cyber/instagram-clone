@@ -5,12 +5,18 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@reduxjs/toolkit':
+    specifier: ^2.0.1
+    version: 2.0.1(react-redux@9.0.2)(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  react-redux:
+    specifier: ^9.0.2
+    version: 9.0.2(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)(redux@5.0.0)
   react-router-dom:
     specifier: ^6.18.0
     version: 6.18.0(react-dom@18.2.0)(react@18.2.0)
@@ -368,6 +374,25 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@reduxjs/toolkit@2.0.1(react-redux@9.0.2)(react@18.2.0):
+    resolution: {integrity: sha512-fxIjrR9934cmS8YXIGd9e7s1XRsEU++aFc9DVNMFMRTM5Vtsg2DCRMj21eslGtDt43IUf9bJL3h5bwUlZleibA==}
+    peerDependencies:
+      react: ^16.9.0 || ^17.0.0 || ^18
+      react-redux: ^7.2.1 || ^8.1.3 || ^9.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-redux:
+        optional: true
+    dependencies:
+      immer: 10.0.3
+      react: 18.2.0
+      react-redux: 9.0.2(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)(redux@5.0.0)
+      redux: 5.0.0
+      redux-thunk: 3.1.0(redux@5.0.0)
+      reselect: 5.0.1
+    dev: false
+
   /@remix-run/router@1.11.0:
     resolution: {integrity: sha512-BHdhcWgeiudl91HvVa2wxqZjSHbheSgIiDvxrF1VjFzBzpTtuDPkOdOi3Iqvc08kXtFkLjhbS+ML9aM8mJS+wQ==}
     engines: {node: '>=14.0.0'}
@@ -498,13 +523,11 @@ packages:
 
   /@types/prop-types@15.7.9:
     resolution: {integrity: sha512-n1yyPsugYNSmHgxDFjicaI2+gCNjsBck8UX9kuofAKlc0h1bL+20oSF72KeNaW2DUlesbEVCFgyV2dPGTiY42g==}
-    dev: true
 
   /@types/react-dom@18.2.14:
     resolution: {integrity: sha512-V835xgdSVmyQmI1KLV2BEIUgqEuinxp9O4G6g3FqO/SqLac049E53aysv0oEFD2kHfejeKU+ZqL2bcFWj9gLAQ==}
     dependencies:
       '@types/react': 18.2.33
-    dev: true
 
   /@types/react@18.2.33:
     resolution: {integrity: sha512-v+I7S+hu3PIBoVkKGpSYYpiBT1ijqEzWpzQD62/jm4K74hPpSP7FF9BnKG6+fg2+62weJYkkBWDJlZt5JO/9hg==}
@@ -512,11 +535,13 @@ packages:
       '@types/prop-types': 15.7.9
       '@types/scheduler': 0.16.5
       csstype: 3.1.2
-    dev: true
 
   /@types/scheduler@0.16.5:
     resolution: {integrity: sha512-s/FPdYRmZR8SjLWGMCuax7r3qCWQw9QKHzXVukAuuIJkXkDRwp+Pu5LMIVFi0Fxbav35WURicYr8u1QsoybnQw==}
-    dev: true
+
+  /@types/use-sync-external-store@0.0.3:
+    resolution: {integrity: sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==}
+    dev: false
 
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
@@ -792,7 +817,6 @@ packages:
 
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
-    dev: true
 
   /debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -1341,6 +1365,10 @@ packages:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
     dev: true
+
+  /immer@10.0.3:
+    resolution: {integrity: sha512-pwupu3eWfouuaowscykeckFmVTpqbzW+rXFCX8rQLkZzM9ftBmU/++Ra+o+L27mz03zJTlyV4UUr+fdKNffo4A==}
+    dev: false
 
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
@@ -1932,6 +1960,36 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
 
+  /react-redux@9.0.2(@types/react-dom@18.2.14)(@types/react@18.2.33)(react-dom@18.2.0)(react@18.2.0)(redux@5.0.0):
+    resolution: {integrity: sha512-34EI42cYZxJF59Iht6RDM5xDun5EdhV8CbJcTe+mYx97XMHLNYA6RrH9r/ZOZX3CetVCYfBEU9oAY9h3sZarsw==}
+    peerDependencies:
+      '@types/react': ^18.2.41
+      '@types/react-dom': ^18.2.17
+      react: ^18.0
+      react-dom: ^18.0
+      react-native: '>=0.71'
+      redux: ^5.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+      redux:
+        optional: true
+    dependencies:
+      '@types/react': 18.2.33
+      '@types/react-dom': 18.2.14
+      '@types/use-sync-external-store': 0.0.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      redux: 5.0.0
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    dev: false
+
   /react-router-dom@6.18.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-Ubrue4+Ercc/BoDkFQfc6og5zRQ4A8YxSO3Knsne+eRbZ+IepAsK249XBH/XaFuOYOYr3L3r13CXTLvYt5JDjw==}
     engines: {node: '>=14.0.0'}
@@ -1975,6 +2033,18 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /redux-thunk@3.1.0(redux@5.0.0):
+    resolution: {integrity: sha512-NW2r5T6ksUKXCabzhL9z+h206HQw/NJkcLm1GPImRQ8IzfXwRGqjVhKJGauHirT0DAuyy6hjdnMZaRoAcy0Klw==}
+    peerDependencies:
+      redux: ^5.0.0
+    dependencies:
+      redux: 5.0.0
+    dev: false
+
+  /redux@5.0.0:
+    resolution: {integrity: sha512-blLIYmYetpZMET6Q6uCY7Jtl/Im5OBldy+vNPauA8vvsdqyt66oep4EUpAMWNHauTC6xa9JuRPhRB72rY82QGA==}
+    dev: false
+
   /reflect.getprototypeof@1.0.4:
     resolution: {integrity: sha512-ECkTw8TmJwW60lOTR+ZkODISW6RQ8+2CL3COqtiJKLd6MmB45hN51HprHFziKLGkAuTGQhBb91V8cy+KHlaCjw==}
     engines: {node: '>= 0.4'}
@@ -1995,6 +2065,10 @@ packages:
       define-properties: 1.2.1
       set-function-name: 2.0.1
     dev: true
+
+  /reselect@5.0.1:
+    resolution: {integrity: sha512-D72j2ubjgHpvuCiORWkOUxndHJrxDaSolheiz5CO+roz8ka97/4msh2E8F5qay4GawR5vzBt5MkbDHT+Rdy/Wg==}
+    dev: false
 
   /resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -2329,6 +2403,14 @@ packages:
     dependencies:
       punycode: 2.3.1
     dev: true
+
+  /use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
